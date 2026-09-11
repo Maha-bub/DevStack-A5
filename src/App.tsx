@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import type { DataType } from "./Components/dataType";
-import DevStacks from "./Components/DevStack/DevStacks";
+import DevStacks from "./Components/DevStacks/DevStacks";
 import Hero from "./Components/Hero"
 import NavHeader from "./Components/NavHeader"
 
