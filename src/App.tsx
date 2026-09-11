@@ -9,6 +9,7 @@ function App() {
 
       <NavHeader></NavHeader>
       <Hero></Hero>
+      <Hero></Hero>
 
 
     </>
