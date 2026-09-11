@@ -1,3 +1,4 @@
+import Hero from "./Components/Hero"
 import NavHeader from "./Components/NavHeader"
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
 
       <NavHeader></NavHeader>
+      <Hero></Hero>
 
 
     </>
