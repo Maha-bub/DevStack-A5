@@ -8,7 +8,7 @@ const DevStackCard = ({ techStack }: stackProps) => {
     console.log(techStack)
     return (
 
-        <div className="container border-2 p-4 border-slate-200 rounded-xl space-y-3">
+        <div className="border-2 p-5 border-slate-200 rounded-xl space-y-3">
             <div className="flex justify-between items-center">
                 <img className="w-[60px]" src={techStack.icon} alt="" />
                 <strong >{techStack.badge}</strong>
@@ -17,9 +17,9 @@ const DevStackCard = ({ techStack }: stackProps) => {
             <p>{techStack.description}</p>
             <hr />
             <div className="flex justify-between">
-                <h3>{techStack.category}</h3>
-                <h3>{techStack.difficulty}</h3>
-                <div className="flex items-center gap-2">
+                <h3 className="bg-gray-200 px-2 py-1 rounded text-[#475569]">{techStack.category}</h3>
+                <h3 className=" text-[#475569] font-semibold">{techStack.difficulty}</h3>
+                <div className="flex items-center gap-2 font-semibold">
                     <IoStar />{techStack.rating}
 
                 </div>
