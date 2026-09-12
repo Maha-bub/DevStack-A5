@@ -25,8 +25,8 @@ const DevStacks = ({ stackData }: datastacksProps) => {
             </div>
 
 
-            <div className="flex gap-3">
-                <div className="grid gric1 md:grid-cols-2 lg:grid-cols-3 mt-16 w-9/12  gap-7">
+            <div className="flex flex-col-reverse gap-6 md:flex-row md:items-start mt-16">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-16 w-9/12  gap-7 ">
                     {
                         dataStack.map((techStack, idx) => {
                             return <DevStackCard key={idx} techStack={techStack}></DevStackCard>
