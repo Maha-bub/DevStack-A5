@@ -1,5 +1,6 @@
 import { use, useState } from "react";
 import type { DataType } from "../dataType";
+import DevStackCard from "./DevStack/DevStackCard";
 
 interface datastacksProps {
     stackData: Promise<DataType[]>
@@ -10,15 +11,21 @@ const DevStacks = ({ stackData }: datastacksProps) => {
     console.log(dataStack, 'fetch data')
 
 
-    const [selectedDevStack, setSeletectedDevStack] = useState<DataType[]>([]);
+    // const [selectedDevStack, setSeletectedDevStack] = useState<DataType[]>([]);
 
-    const handleSelectedDevStack = () => {
-        console.log(stackData)
+    // const handleSelectedDevStack = () => {
+    //     console.log(stackData)
 
-    }
+    // }
     return (
-        <div>
-            {/* <h2>dataStack:{dataStack.length}</h2> */}
+        <div className="grid gric1 md:grid-cols-2 lg:grid-cols-3">
+
+            {
+                dataStack.map((techStack, idx) => {
+                    return <DevStackCard key={idx} techStack={techStack}></DevStackCard>
+
+                })
+            }
         </div>
     );
 };
