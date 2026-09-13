@@ -3,7 +3,8 @@ import type { DataType } from "../../dataType";
 import { useState } from "react";
 
 interface stackProps {
-    stackProps: DataType;
+    stackProps: DataType,
+    handleSelectedCards: (card: DataType)=>void;
 }
 
 const badgeStyles = {
@@ -19,12 +20,14 @@ const badgeStyles = {
 
 
 }
-const DevStackCard = ({ techStack }: stackProps) => {
-    console.log(techStack)
+const DevStackCard = ({ techStack, handleSelectedCards }: stackProps) => {
+    // console.log(techStack)
     const [isSelected, setIsSelected] = useState(false)
 
     const handleCardButton = () => {
         setIsSelected(true);
+        handleSelectedCards(techStack)
+      
 
     }
 

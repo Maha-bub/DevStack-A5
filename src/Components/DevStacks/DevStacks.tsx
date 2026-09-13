@@ -1,21 +1,34 @@
 import { use, useState } from "react";
 import type { DataType } from "../dataType";
 import DevStackCard from "./DevStack/DevStackCard";
+import { HiX } from "react-icons/hi";
 
 interface datastacksProps {
     stackData: Promise<DataType[]>
+
 }
 const DevStacks = ({ stackData }: datastacksProps) => {
 
     const dataStack = use(stackData);
-    console.log(dataStack, 'fetch data')
+    // console.log(dataStack, 'fetch data')
 
 
-    const [selectedDevStack, setSeletectedDevStack] = useState<DataType[]>([]);
+    const [selectedCards, setselectedCards] = useState<DataType[]>([]);
 
-    const handleSelectedDevStack = () => {
-        console.log(stackData)
+    const handleSelectedCards = (card: DataType) => {
+        const newSelectedCard = [...selectedCards, card];
+        console.log(newSelectedCard, 'new data')
+        setselectedCards(newSelectedCard);
 
+
+    }
+    const handleRemoveCard = (card: DataType) => {
+        const remainingCards = selectedCards.filter(selectedCard => selectedCard.name !== card.name);
+        setselectedCards(remainingCards);
+
+    }
+    const handleRemoveCardAll = () => {
+        setselectedCards([])
     }
     return (
         <div className="max-w-7xl mx-auto ">
@@ -29,13 +42,45 @@ const DevStacks = ({ stackData }: datastacksProps) => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-16 w-9/12  gap-7 ">
                     {
                         dataStack.map((techStack, idx) => {
-                            return <DevStackCard key={idx} techStack={techStack}></DevStackCard>
+                            return <DevStackCard
+                                key={idx}
+                                techStack={techStack}
+                                handleSelectedCards={handleSelectedCards}
+                            ></DevStackCard>
 
                         })
                     }
                 </div>
-                <div className="w-3/12 border-2 mt-16 p-5 border-slate-200 rounded-xl space-y-3">
+                <div className="sm:mx-auto md:w-3/12 border-2 mt-16 p-5 border-slate-200 rounded-xl space-y-3">
                     <h2 className="text-2xl font-bold ">Your Stacks</h2>
+                    <p className="text-[16px] font-semibold">{selectedCards.length} Technology selected</p>
+                    <div>
+                        {
+                            selectedCards.map(card => {
+                                return (
+
+                                    <>
+
+
+                                        <div className="flex gap-4 my-4 border-2 justify-between mx-auto  border-slate-200 rounded-xl px-4 py-2">
+                                            <div className="flex gap-4">
+                                                <img className={`w-[30px] rounded-full `} src={card.icon} alt="" />
+                                                <div className="space-y-1">
+                                                    <h2 className="text-[16px] font-bold">{card.name}</h2>
+                                                    <p className=" text-[#475569] text-sm font-semibold                                                               ko9"> {card.difficulty}</p>
+                                                </div>
+                                            </div>
+                                            <button onClick={() => handleRemoveCard(card)}><HiX /></button>
+                                        </div>
+
+
+                                    </>
+
+                                )
+                            })
+                        }
+
+                    </div>
 
 
                 </div>
