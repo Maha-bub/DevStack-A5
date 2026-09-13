@@ -1,5 +1,6 @@
 import { IoStar } from "react-icons/io5";
 import type { DataType } from "../../dataType";
+import { useState } from "react";
 
 interface stackProps {
     stackProps: DataType;
@@ -20,9 +21,16 @@ const badgeStyles = {
 }
 const DevStackCard = ({ techStack }: stackProps) => {
     console.log(techStack)
+    const [isSelected, setIsSelected] = useState(false)
+
+    const handleCardButton = () => {
+        setIsSelected(true);
+
+    }
+
     return (
 
-        <div className="border-2 p-5 border-slate-200 rounded-xl space-y-3">
+        <div className={`border-2 p-5 ${isSelected ? 'border-2 bg-[#fefcf8] border-red-300 rounded-xl' : ' border-slate-200 rounded-xl'} space-y-3`}>
             <div className="flex justify-between items-center">
                 <img className={`w-[40px] p-2 rounded-full  ${badgeStyles[techStack.badge]}`} src={techStack.icon} alt="" />
 
@@ -45,7 +53,9 @@ const DevStackCard = ({ techStack }: stackProps) => {
                 </div>
 
             </div>
-            <button className="btn btn-neutral w-full">Add to Stack</button>
+            <button
+                onClick={() => { handleCardButton() }}
+                className={`btn btn-neutral w-full }`}>Add to Stack</button>
 
         </div>
     );

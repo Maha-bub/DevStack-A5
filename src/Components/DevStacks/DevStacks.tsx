@@ -11,12 +11,12 @@ const DevStacks = ({ stackData }: datastacksProps) => {
     console.log(dataStack, 'fetch data')
 
 
-    // const [selectedDevStack, setSeletectedDevStack] = useState<DataType[]>([]);
+    const [selectedDevStack, setSeletectedDevStack] = useState<DataType[]>([]);
 
-    // const handleSelectedDevStack = () => {
-    //     console.log(stackData)
+    const handleSelectedDevStack = () => {
+        console.log(stackData)
 
-    // }
+    }
     return (
         <div className="max-w-7xl mx-auto ">
             <div>
