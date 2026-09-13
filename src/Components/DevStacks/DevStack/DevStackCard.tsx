@@ -55,7 +55,10 @@ const DevStackCard = ({ techStack }: stackProps) => {
             </div>
             <button
                 onClick={() => { handleCardButton() }}
-                className={`btn btn-neutral w-full }`}>Add to Stack</button>
+                disabled={isSelected}
+                className={`btn btn-neutral w-full ${isSelected ? 'pointer-events-auto' : 'pointer-coarse'} }`}
+                disabled={isSelected}
+            >Add to Stack</button>
 
         </div>
     );
