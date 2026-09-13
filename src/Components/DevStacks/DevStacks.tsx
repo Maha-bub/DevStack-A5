@@ -79,7 +79,11 @@ const DevStacks = ({ stackData }: datastacksProps) => {
                                 )
                             })
                         }
+                        <button
+                            onClick={() => { handleRemoveCardAll() }}
+                            className={`btn btn-neutral w-full ${selectedCards.length === 0 ? 'hidden' : ''} `}
 
+                        >Remove All</button>
                     </div>
 
 
