@@ -2,7 +2,7 @@ import FooterLogo from '../assets/logo-text.png'
 const Footer = () => {
     return (
         <>
-            <footer className='mt-10 py-10 border-t-2 border-slate-200'>
+            <footer className='mt-10 pt-10 border-t-2 border-slate-200'>
                 <div className='max-w-7xl mx-auto flex justify-between items-center'>
                     <div>
                         <img src={FooterLogo} alt="" />
@@ -39,8 +39,8 @@ const Footer = () => {
 
                     </div>
                 </div>
-                <div className='container mt-10 pt-10 flex justify-between mx-auto border-t-2 border-slate-200'>
-                    <p>&copy; 2026 Dev Stack.All rights reserved!</p>
+                <div className='container m-10 pt-10 flex justify-between mx-auto border-t-2 border-slate-200'>
+                    <p className='ml-5'>&copy; 2026 Dev Stack.All rights reserved!</p>
                     <ul className='flex justify-between gap-4 mx-7 space-y-1'>
                         <li>Privacy</li>
                         <li>Conditions</li>
