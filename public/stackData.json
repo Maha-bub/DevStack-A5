@@ -117,7 +117,7 @@
         "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
         "rating": 4.9,
         "difficulty": "Intermediate",
-        "badge": "Top SQL"
+        "badge": "Top_SQL"
     },
     {
         "id": "mongodb",
