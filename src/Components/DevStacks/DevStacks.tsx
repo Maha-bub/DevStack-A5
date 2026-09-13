@@ -4,6 +4,7 @@ import DevStackCard from "./DevStack/DevStackCard";
 import { HiX } from "react-icons/hi";
 import { toast } from "react-toastify";
 
+
 interface datastacksProps {
     stackData: Promise<DataType[]>
 
@@ -32,10 +33,7 @@ const DevStacks = ({ stackData }: datastacksProps) => {
 
     }
     const handleRemoveCardAll = (card: DataType) => {
-
-        {
-            selectedCards.length === 0 ? setselectedCards(newSelectedCard) : setselectedCards([]);
-        }
+        setselectedCards([]);
         toast.error(`Your Stacks Empty!`)
 
     }
@@ -52,10 +50,12 @@ const DevStacks = ({ stackData }: datastacksProps) => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-16 w-9/12  gap-7 ">
                     {
                         dataStack.map((techStack, idx) => {
+                            const isSelected = selectedCards.some((card) => card.name === techStack.name)
                             return <DevStackCard
                                 key={idx}
                                 techStack={techStack}
                                 handleSelectedCards={handleSelectedCards}
+                                isSelected={isSelected}
                             ></DevStackCard>
 
                         })
@@ -92,7 +92,7 @@ const DevStacks = ({ stackData }: datastacksProps) => {
                                     })
                                 }
                                 <button
-                                    onClick={() => { handleRemoveCardAll() }}
+                                    onClick={handleRemoveCardAll}
                                     className={`btn bg-pink-100 outline w-full text-red-500 ${selectedCards.length === 0 ? 'hidden' : ''} `}
 
                                 >Remove All</button>

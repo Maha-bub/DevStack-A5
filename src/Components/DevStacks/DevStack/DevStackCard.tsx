@@ -1,10 +1,11 @@
 import { IoStar } from "react-icons/io5";
 import type { DataType } from "../../dataType";
-import { useState } from "react";
+
 
 interface stackProps {
     stackProps: DataType,
     handleSelectedCards: (card: DataType) => void;
+    isSelected: boolean
 }
 
 const badgeStyles = {
@@ -20,12 +21,11 @@ const badgeStyles = {
 
 
 }
-const DevStackCard = ({ techStack, handleSelectedCards }: stackProps) => {
+const DevStackCard = ({ techStack, handleSelectedCards, isSelected }: stackProps) => {
     // console.log(techStack)
-    const [isSelected, setIsSelected] = useState(false)
+    // const [isSelected, setIsSelected] = useState(false)
 
     const handleCardButton = () => {
-        setIsSelected(true);
         handleSelectedCards(techStack)
 
 
@@ -60,8 +60,8 @@ const DevStackCard = ({ techStack, handleSelectedCards }: stackProps) => {
                 onClick={() => { handleCardButton() }}
                 disabled={isSelected}
                 className={`btn btn-neutral w-full ${isSelected ? 'pointer-events-auto' : 'pointer-coarse'} }`}
-                disabled={isSelected}
-            >Add to Stack</button>
+                
+            >{isSelected?'Card Added':'Add to Stack'}</button>
 
         </div>
     );
