@@ -3,6 +3,7 @@ import type { DataType } from "./Components/dataType";
 import DevStacks from "./Components/DevStacks/DevStacks";
 import Hero from "./Components/Hero"
 import NavHeader from "./Components/NavHeader"
+import Footer from "./Components/Footer";
 
 const DevStacksData = async (): Promise<DataType> => {
   const response = await fetch('/stackData.json');
@@ -24,6 +25,7 @@ function App() {
 
         <DevStacks stackData={stackData}></DevStacks>
       </Suspense>
+      <Footer></Footer>
 
 
 

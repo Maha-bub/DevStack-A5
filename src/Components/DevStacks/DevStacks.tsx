@@ -16,20 +16,25 @@ const DevStacks = ({ stackData }: datastacksProps) => {
     const [selectedCards, setselectedCards] = useState<DataType[]>([]);
 
     const handleSelectedCards = (card: DataType) => {
+
         const newSelectedCard = [...selectedCards, card];
-        console.log(newSelectedCard, 'new data')
         setselectedCards(newSelectedCard);
 
-
     }
+
     const handleRemoveCard = (card: DataType) => {
         const remainingCards = selectedCards.filter(selectedCard => selectedCard.name !== card.name);
         setselectedCards(remainingCards);
 
     }
-    const handleRemoveCardAll = () => {
-        setselectedCards([])
+    const handleRemoveCardAll = (card: DataType) => {
+        const newSelectedCard = [...selectedCards, card];
+
+        {
+            selectedCards.length === 0 ? setselectedCards(newSelectedCard) : setselectedCards([]);
+        }
     }
+
     return (
         <div className="max-w-7xl mx-auto ">
             <div>
