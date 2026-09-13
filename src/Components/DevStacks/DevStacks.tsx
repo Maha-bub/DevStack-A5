@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { DataType } from "../dataType";
 import DevStackCard from "./DevStack/DevStackCard";
 import { HiX } from "react-icons/hi";
+import { toast } from "react-toastify";
 
 interface datastacksProps {
     stackData: Promise<DataType[]>
@@ -19,20 +20,24 @@ const DevStacks = ({ stackData }: datastacksProps) => {
 
         const newSelectedCard = [...selectedCards, card];
         setselectedCards(newSelectedCard);
+        toast.success(`${card.name} Successfully added to your stack`)
+
 
     }
 
     const handleRemoveCard = (card: DataType) => {
         const remainingCards = selectedCards.filter(selectedCard => selectedCard.name !== card.name);
         setselectedCards(remainingCards);
+        toast.warning(`${card.name} Card Remove Successfully!`)
 
     }
     const handleRemoveCardAll = (card: DataType) => {
-        const newSelectedCard = [...selectedCards, card];
+        toast.error(`Your Stacks Empty!`)
 
         {
             selectedCards.length === 0 ? setselectedCards(newSelectedCard) : setselectedCards([]);
         }
+        toast.success(`${player.playerName} purchased successfully done!`)
     }
 
     return (
