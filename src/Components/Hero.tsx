@@ -3,7 +3,7 @@ import HeroImage from '../assets/banner-stack.png'
 const Hero = () => {
     return (
 
-        <div className=" max-w-7xl flex-row items-center justify-between mx-auto md:flex justify-between items-center">
+        <div className=" max-w-7xl flex-row mx-auto md:flex justify-between items-center">
             <div className='w-1/2 space-y-2'>
                 <h2 className='text-4xl mx-auto mx-6 md:text-6xl font-extrabold '>Build Your Ideal <br /> <span className='bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent'>Development Stack</span></h2>
 
