@@ -33,8 +33,8 @@ const DevStackCard = ({ techStack }: stackProps) => {
                 </strong>
 
             </div>
-            <h2>{techStack.name}</h2>
-            <p>{techStack.description}</p>
+            <h2 className="text-2xl font-semibold">{techStack.name}</h2>
+            <p className="text-lg text-[#475569]">{techStack.description}</p>
             <hr />
             <div className="flex justify-between items-center">
                 <h3 className="bg-gray-200 px-2 py-1 rounded text-[#475569]">{techStack.category}</h3>
