@@ -4,7 +4,7 @@ import { useState } from "react";
 
 interface stackProps {
     stackProps: DataType,
-    handleSelectedCards: (card: DataType)=>void;
+    handleSelectedCards: (card: DataType) => void;
 }
 
 const badgeStyles = {
@@ -27,7 +27,7 @@ const DevStackCard = ({ techStack, handleSelectedCards }: stackProps) => {
     const handleCardButton = () => {
         setIsSelected(true);
         handleSelectedCards(techStack)
-      
+
 
     }
 
@@ -45,10 +45,10 @@ const DevStackCard = ({ techStack, handleSelectedCards }: stackProps) => {
 
             </div>
             <h2 className="text-2xl font-semibold">{techStack.name}</h2>
-            <p className="text-lg text-[#475569]">{techStack.description}</p>
+            <p className="text-[14px] text-[#475569]">{techStack.description}</p>
             <hr />
             <div className="flex justify-between items-center">
-                <h3 className="bg-gray-200 px-2 py-1 rounded text-[#475569]">{techStack.category}</h3>
+                <h3 className="bg-gray-200 px-2 py-1 rounded-sm text-[#475569]">{techStack.category}</h3>
                 <h3 className=" text-[#475569] text-sm font-semibold">{techStack.difficulty}</h3>
                 <div className="flex items-center gap-2 text-sm font-semibold">
                     <IoStar className=" text-yellow-400" />{techStack.rating}
