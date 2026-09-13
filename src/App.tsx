@@ -5,7 +5,7 @@ import Hero from "./Components/Hero"
 import NavHeader from "./Components/NavHeader"
 import Footer from "./Components/Footer";
 
-const DevStacksData = async (): Promise<DataType> => {
+const DevStacksData = async (): Promise<DataType[]> => {
   const response = await fetch('/stackData.json');
   const data = await response.json();
   return data;

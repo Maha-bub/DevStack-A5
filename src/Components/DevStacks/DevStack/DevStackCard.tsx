@@ -3,7 +3,7 @@ import type { DataType } from "../../dataType";
 
 
 interface stackProps {
-    stackProps: DataType,
+    techStack: DataType,
     handleSelectedCards: (card: DataType) => void;
     isSelected: boolean
 }
@@ -35,11 +35,11 @@ const DevStackCard = ({ techStack, handleSelectedCards, isSelected }: stackProps
 
         <div className={`border-2 p-5 ${isSelected ? 'border-2 bg-[#fefcf8] border-red-300 rounded-xl' : ' border-slate-200 rounded-xl'} space-y-3`}>
             <div className="flex justify-between items-center">
-                <img className={`w-[40px] p-2 rounded-full  ${badgeStyles[techStack.badge]}`} src={techStack.icon} alt="" />
+                <img className={`w-[40px] p-2 rounded-full  ${badgeStyles[techStack.badge as keyof typeof badgeStyles]}`} src={techStack.icon} alt="" />
 
 
                 <strong
-                    className={`px-2 py-1 rounded-xl text-sm font-semibold ${badgeStyles[techStack.badge]}`}
+                    className={`px-2 py-1 rounded-xl text-sm font-semibold ${badgeStyles[techStack.badge as keyof typeof badgeStyles]}`}
                 >{techStack.badge}
                 </strong>
 

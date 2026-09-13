@@ -32,7 +32,7 @@ const DevStacks = ({ stackData }: datastacksProps) => {
         toast.warning(`${card.name} Card Remove Successfully!`)
 
     }
-    const handleRemoveCardAll = (card: DataType) => {
+    const handleRemoveCardAll = () => {
         setselectedCards([]);
         toast.error(`Your Stacks Empty!`)
 
