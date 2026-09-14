@@ -12,7 +12,7 @@ const Hero = () => {
                 </p>
                 <div className='flex sm:flex-row gap-4 justify-center md:justify-start'>
                     <button className="btn btn-soft w-50 bg-gradient-to-r from-[#F97316] to-[#EC4899] text-sm sm:w-auto px-5">Explore Technologies</button>
-                    <button className="btn btn-outline w-50 sm:w-auto px-5 ">Learn More</button>
+                    <button className="btn btn-outline w-50 sm:w-auto px-12 ">Learn More</button>
                 </div>
             </div>
             <div>
