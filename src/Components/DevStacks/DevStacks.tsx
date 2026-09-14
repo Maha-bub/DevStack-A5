@@ -39,15 +39,15 @@ const DevStacks = ({ stackData }: datastacksProps) => {
     }
 
     return (
-        <div className="max-w-7xl mx-auto ">
-            <div>
+        <div className="md:max-w-7xl mx-auto mt-4 ">
+            <div className="w-10/12 mx-auto py-2">
                 <h2 className="text-4xl  font-bold ">Explore the <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">Technologies</span> </h2>
                 <p className="font-semibold text-[#64748B] ">Pick one technology per category to build your ideal stack.</p>
             </div>
 
 
-            <div className="flex flex-col-reverse gap-6 md:flex-row md:items-start mt-16">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-16 w-9/12  gap-7 ">
+            <div className="flex flex-col-reverse gap-6 md:flex-row md:items-start mt-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 mt-10 mb-6 w-9/12  gap-7 ">
                     {
                         dataStack.map((techStack, idx) => {
                             const isSelected = selectedCards.some((card) => card.name === techStack.name)
@@ -61,7 +61,7 @@ const DevStacks = ({ stackData }: datastacksProps) => {
                         })
                     }
                 </div>
-                <div className="w-full sm:w-11/12 mx-auto md:w-3/12 border-2 mt-16 p-4 sm:p-5 border-slate-200 rounded-xl space-y-3">
+                <div className="w-10/12 sm:w-9/12 mx-auto md:w-3/12 border-2 mt-6 p-4 sm:p-5 border-slate-200 rounded-xl space-y-3">
                     <h2 className="text-2xl font-bold ">Your Stacks</h2>
                     <p className="text-[16px] font-semibold">{selectedCards.length} Technology selected</p>
                     {
