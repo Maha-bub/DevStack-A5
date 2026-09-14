@@ -61,7 +61,7 @@ const DevStacks = ({ stackData }: datastacksProps) => {
                         })
                     }
                 </div>
-                <div className="w-11/12 sm:mx-auto md:w-3/12 border-2 mt-16 p-5 border-slate-200 rounded-xl space-y-3">
+                <div className="w-full sm:w-11/12 mx-auto md:w-3/12 border-2 mt-16 p-4 sm:p-5 border-slate-200 rounded-xl space-y-3">
                     <h2 className="text-2xl font-bold ">Your Stacks</h2>
                     <p className="text-[16px] font-semibold">{selectedCards.length} Technology selected</p>
                     {
@@ -74,7 +74,7 @@ const DevStacks = ({ stackData }: datastacksProps) => {
                                             <>
 
 
-                                                <div className="flex gap-4 my-4 border-2 justify-between mx-auto  border-slate-200 rounded-xl px-4 py-2">
+                                                <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 my-4 border-2 justify-between mx-auto  border-slate-200 rounded-xl px-4 sm:py-2 py-3">
                                                     <div className="flex gap-4">
                                                         <img className={`w-[30px] rounded-xl `} src={card.icon} alt="" />
                                                         <div className="space-y-1">

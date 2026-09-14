@@ -10,7 +10,7 @@ const Hero = () => {
                 <p className='md:mb-6 text-sm text-[#475569]'>
                     Explore frontend, backend, database and tooling options, compare them side by side, and put together the stack that fits your next project.
                 </p>
-                <div className='flex flex-col sm:flex-row gap-4 justify-center md:justify-start'>
+                <div className='flex sm:flex-row gap-4 justify-center md:justify-start'>
                     <button className="btn btn-soft w-50 bg-gradient-to-r from-[#F97316] to-[#EC4899] text-sm sm:w-auto px-5">Explore Technologies</button>
                     <button className="btn btn-outline w-50 sm:w-auto px-5 ">Learn More</button>
                 </div>
