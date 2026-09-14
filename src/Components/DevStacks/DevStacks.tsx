@@ -61,7 +61,7 @@ const DevStacks = ({ stackData }: datastacksProps) => {
                         })
                     }
                 </div>
-                <div className="w-10/12 sm:w-9/12 mx-auto md:w-3/12 border-2 mt-6 p-4 sm:p-5 border-slate-200 rounded-xl space-y-3">
+                <div className="w-10/12 sm:w-9/12 mx-auto md:w-3/12 border-2 mt-10 p-4 sm:p-5 border-slate-200 rounded-xl space-y-3">
                     <h2 className="text-2xl font-bold ">Your Stacks</h2>
                     <p className="text-[16px] font-semibold">{selectedCards.length} Technology selected</p>
                     {
