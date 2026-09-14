@@ -7,60 +7,73 @@ const NavHeader = () => {
         <>
 
             <nav className='container sticky z-50 top-0 bg-white mx-auto px-7'>
-                <div className='flex justify-between items-center py-5 border-b-2 border-slate-200'>
-                    <img className='h-12 sm:h-12' src={Logo} alt="DevStack Logo" />
 
-                    {/* desktop menu */}
-                    <ul className='items-center hidden md:flex gap-7 text-[#475569] lg:items-center justify-center'>
-                        <li><a className='text-[#D91B7E] ' href="">Home</a></li>
-                        <li><a href="">Technologies</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
 
-                    {/* Mobile menu button */}
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className='md:hidden text-3xl'>
-                        {
-                            isOpen ? <HiXCircle /> : <HiMenu />
-                        }
-                    </button>
+                <div className='max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 border-b-2 border-slate-200'>
+                    <div className='flex justify-between items-center py-4'>
+                        <img className='h-10 sm:h-12' src={Logo} alt="DevStack Logo" />
 
-                    {isOpen && (
-                        <ul className="md:hidden px-4 pb-4 space-y-3 absolute">
+                        {/* desktop menu */}
+                        <ul className='hidden md:flex items-center gap-7 text-[#475569]'>
                             <li>
-                                <a href="#" className="block hover:text-purple-600">
-                                    Home
+                                <a className='text-[#D91B7E] ' href="">Home
                                 </a>
                             </li>
-
-                            <li>
-                                <a href="#" className="block hover:text-purple-600">
-                                    About
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" className="block hover:text-purple-600">
-                                    Services
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" className="block hover:text-purple-600">
-                                    Contact
-                                </a>
-                            </li>
+                            <li><a href="">Technologies</a></li>
+                            <li><a href="">Projects</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
                         </ul>
-                    )}
-                    <div className='flex gap-4'>
-                        <button className="rounded-full text-sm font-semibold py-2.5 px-5">Sign In</button>
-                        <button className="rounded-full text-sm font-semibold py-2.5 px-5 text-white bg-[#D91B7E]">Sign Up</button>
+
+
+                        <div className='fled
+                        items-center gap-3 sm:gap-4'>
+                            <div className='hidden sm:flex items-center gap-3 sm:gap-4'>
+                                <button className="rounded-full text-sm font-semibold py-2 px-4
+                                 md:px-5">Sign In</button>
+                                <button className="rounded-full text-sm font-semibold py-2 px-4 sm:px-5 text-white bg-[#D91B7E]">Sign Up</button>
+                            </div>
+
+                        </div>
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className='md:hidden text-3xl'>
+                            {
+                                isOpen ? <HiXCircle /> : <HiMenu />
+                            }
+                        </button>
+
+                        {isOpen && (
+                            <ul className="md:hidden px-4 pb-4 space-y-3 absolute">
+                                <li>
+                                    <a href="#" className="block hover:text-purple-600">
+                                        Home
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" className="block hover:text-purple-600">
+                                        About
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" className="block hover:text-purple-600">
+                                        Services
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" className="block hover:text-purple-600">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        )}
+
                     </div>
                 </div>
-            </nav>
+            </nav >
 
 
         </>
