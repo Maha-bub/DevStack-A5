@@ -33,7 +33,7 @@ const DevStackCard = ({ techStack, handleSelectedCards, isSelected }: stackProps
 
     return (
 
-        <div className={`w-10/12 mx-auto sm: border-2 p-5 ${isSelected ? 'border-2 bg-[#fefcf8] border-red-300 rounded-xl' : ' border-slate-200 rounded-xl'} space-y-3`}>
+        <div className={`w-11/12 mx-auto sm: border-2 p-5 ${isSelected ? 'border-2 bg-[#fefcf8] border-red-300 rounded-xl' : ' border-slate-200 rounded-xl'} space-y-3`}>
             <div className="flex justify-between items-center">
                 <img className={`w-[40px] p-2 rounded-full  ${badgeStyles[techStack.badge as keyof typeof badgeStyles]}`} src={techStack.icon} alt="" />
 
