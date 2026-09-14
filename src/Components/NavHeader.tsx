@@ -11,7 +11,7 @@ const NavHeader = () => {
 
                 <div className='max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 border-b-2 border-slate-200'>
                     <div className='flex justify-between items-center py-4'>
-                        <img className='h-10 sm:h-12' src={Logo} alt="DevStack Logo" />
+                        <img className='h-8 sm:h-12' src={Logo} alt="DevStack Logo" />
 
                         {/* desktop menu */}
                         <ul className='hidden md:flex items-center gap-7 text-[#475569]'>
@@ -28,11 +28,22 @@ const NavHeader = () => {
 
                         <div className='fled
                         items-center gap-3 sm:gap-4'>
+                            {/* desktop btns */}
                             <div className='hidden sm:flex items-center gap-3 sm:gap-4'>
-                                <button className="rounded-full text-sm font-semibold py-2 px-4
+                                <button className="rounded-full border-none text-slate-500 outline text-sm font-semibold py-2 px-4
                                  md:px-5">Sign In</button>
                                 <button className="rounded-full text-sm font-semibold py-2 px-4 sm:px-5 text-white bg-[#D91B7E]">Sign Up</button>
                             </div>
+
+                            {/* mobilebtn */}
+                            <div className='sm:hidden flex items-center gap-2'>
+                                <button className="rounded-full text-xs border-none text-slate-500 outline font-semibold p-1">Sign In</button>
+
+                                <button className="rounded-full text-sm font-semibold p-1 px-4 sm:px-5 text-white bg-[#D91B7E]">Sign Up</button>
+                            </div>
+
+
+
 
                         </div>
                         <button
@@ -44,9 +55,9 @@ const NavHeader = () => {
                         </button>
 
                         {isOpen && (
-                            <ul className="md:hidden px-4 pb-4 space-y-3 absolute">
+                            <ul className="md:hidden border-t border-slate-500 px-4 pb-4 space-y-3 absolute">
                                 <li>
-                                    <a href="#" className="block hover:text-purple-600">
+                                    <a href="#" className="block hover:text-purple-600 font-semibold">
                                         Home
                                     </a>
                                 </li>
